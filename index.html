@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ΛεξιΓρίφος</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@600;700;800&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f3f1fb;
+    --surface: #ffffff;
+    --text: #241f36;
+    --text-muted: #5b5470;
+    --accent: #6c4ee3;
+    --accent-2: #1f9c90;
+    --border: #e3dff5;
+    --chip-gold: #e0a415;
+    --chip-teal: #1f9c90;
+    --chip-coral: #e35a3a;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #17141f;
+      --surface: #211d2e;
+      --text: #efedf7;
+      --text-muted: #b7afd1;
+      --accent: #a894f5;
+      --accent-2: #4fd9cb;
+      --border: #332c46;
+      --chip-gold: #ffc857;
+      --chip-teal: #2ec4b6;
+      --chip-coral: #ff7a59;
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "PT Sans", Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.7;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 20px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .card {
+    max-width: 480px;
+    width: 100%;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 44px clamp(24px, 6vw, 48px);
+    text-align: center;
+  }
+
+  .tiles {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 24px;
+  }
+
+  .tile {
+    width: 40px;
+    height: 40px;
+    border-radius: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Rubik", sans-serif;
+    font-weight: 800;
+    font-size: 19px;
+    flex-shrink: 0;
+  }
+  .tile.gold { background: var(--chip-gold); color: #2a1c00; }
+  .tile.teal { background: var(--chip-teal); color: #06322e; }
+  .tile.coral { background: var(--chip-coral); color: #3a0f04; }
+
+  h1 {
+    font-family: "Rubik", sans-serif;
+    font-weight: 800;
+    font-size: 36px;
+    margin: 0 0 10px;
+    color: var(--accent);
+    text-wrap: balance;
+  }
+
+  p.tagline {
+    color: var(--text-muted);
+    font-size: 17px;
+    margin: 0 0 32px;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  a.btn {
+    display: block;
+    padding: 14px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    transition: opacity 0.15s ease;
+  }
+  a.btn:hover { opacity: 0.88; }
+
+  a.btn.primary {
+    background: var(--accent);
+    color: #ffffff;
+  }
+
+  a.btn.secondary {
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--border);
+  }
+
+  footer {
+    margin-top: 28px;
+    color: var(--text-muted);
+    font-size: 13px;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="tiles">
+      <div class="tile gold">Λ</div>
+      <div class="tile teal">Ξ</div>
+      <div class="tile coral">Ε</div>
+    </div>
+    <h1>ΛεξιΓρίφος</h1>
+    <p class="tagline">Ξεδιάλυνε τα γράμματα, βρες τη λέξη</p>
+    <div class="buttons">
+      <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.lexigrifos.app">Κατέβασε το από το Google Play</a>
+      <a class="btn secondary" href="https://mitpant33.github.io/wordquiz-privacy/">Πολιτική Απορρήτου</a>
+    </div>
+    <footer>ΛεξιΓρίφος — παιχνίδι αναγραμματισμού ελληνικών λέξεων</footer>
+  </div>
+</body>
+</html>
